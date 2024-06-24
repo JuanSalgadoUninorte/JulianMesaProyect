@@ -1,0 +1,15 @@
+Run:
+SERENITY WEB TRAINING
+
+GRADLE
+gradle clean test -Dwebdriver.driver=firefox -Denvironment=staging
+
+MAVEN
+mvn clean verify -Dwebdriver.driver=chrome -Denvironment=staging
+
+Running by tags
+Maven:
+mvn verify -Dcucumber.options="--tags '@login or @foo'"
+mvn verify -Dcucumber.options="--tags @login"
+gradle clean test -Dcucumber.options="--tags '@login or @foo'"
+gradle clean test -Dcucumber.options="--tags @login"
